@@ -1,11 +1,14 @@
+/* Apply consistent box model sizing */
 * {
     box-sizing: border-box;
 }
 
+/* Remove default body margin */
 body{
      margin: 0;
 }
 
+/* Top site header container */
 .header {
     display: flex;
     align-items: center;
@@ -15,10 +18,12 @@ body{
     color: #fff;
 }
 
+/* Header logo image size */
 .logo {
     width: 40px;
 }
 
+/* Group logo and brand name in nav */
 .nav-logo {
     display: flex;
     align-items: center;
@@ -27,23 +32,27 @@ body{
 
 } 
 
+/* Brand name text styling */
 .name {
     font-family: sans-serif;
     margin-left: 10px;
 }
 
+/* Navigation list container */
 .nav-list {
     list-style: none;
     display: flex;
     
 }
 
+/* Individual navigation list item */
 .nav-list-item {
     margin-right: 30px;
     font-family:sans-serif;
 }
 
 /* // main styles */
+/* Main hero/content section layout */
 .main {
     /* height: 300px; */
     background: url(/src/assets/green.jpg)no-repeat center center/cover;
@@ -54,6 +63,8 @@ body{
     padding: 20px;
 
 }
+
+/* Main heading typography */
 .main-content h1 {
     font-family: sans-serif;
     margin-left: 20px;
@@ -61,6 +72,7 @@ body{
     font-size: 3rem;
 }
 
+/* Main feature list layout */
 .main-list {
     display: flex;
     /* list-style: none; */
@@ -68,17 +80,20 @@ body{
     
 }
 
+/* Main list item appearance */
 .main-list-item {
     margin-left: 30px;
     font-family: sans-serif;
     font-weight: 700;
 }
 
+/* Remove bullet from first list item */
 .main-list-item:nth-child(1) {
     list-style: none;
 }
 
 
+/* Main section image presentation */
 .main-image > img {
     /* width: 400px; */
     height: 300px;
@@ -89,6 +104,7 @@ body{
 
 /* // travel header styles */
 
+/* Travel section header bar */
 .travel-header {
   display: flex;
   align-items: center;
@@ -97,11 +113,78 @@ body{
 }
 
 
+/* Travel header icon size and spacing */
 .travel-header img {
     width: 40px;
     margin-right: 10px;
 }
+
+/* Travel header title text */
 .travel-header h1 {
     font-family: sans-serif;
     color: #fff;
+}
+
+/* Travel entry card layout and outer spacing */
+.entry {
+    display: flex;
+    margin: 24px auto;
+    padding: 0 24px;
+    max-width: 900px;
+}
+
+/* Travel entry image frame */
+.entry-image-container {
+   
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 5px;
+    margin-right: 12px;
+}
+
+/* Travel entry image fit behavior */
+.entry-image {
+    width: 100%;
+    height: 100%;
+   object-fit: cover;
+}
+
+
+/* Row for location icon, country, and map link */
+.entry-location-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+
+
+/* Location icon inside entry info */
+.entry-info img {
+    width: 1rem;
+    margin-right: 0;
+
+}
+
+/* Country text styling */
+.entry-info span.country {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin-right: 0;
+    font-size: 1rem;
+}
+
+/* Google Maps link styling */
+.entry-info a {
+    color: #2b283a;
+    font-size: 1rem;
+}
+
+/* Entry title styling */
+.entry-info h2 {
+          font-family: "sansarif"
+          
 }
