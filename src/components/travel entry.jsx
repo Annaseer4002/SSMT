@@ -1,21 +1,24 @@
-export default function Enrty() {
+export default function Enrty(whatever) {
+  console.log(whatever);
+  
    return (
           <article className="entry">
             <div className="entry-image-container">
-                  <img className="entry-image" src="/src/assets/image.png" alt="" />
+                  <img className="entry-image" src={whatever.img.src} alt={whatever.img.alt} />
             </div>
             
             <div className="entry-info">
               <div className="entry-location-row">
-                <img src="/src/assets/location.webp" alt="spain image" />
-                <span className="country">Spain</span>
-                <a href="https://share.google/ku98K2Pfq7MwXjKZg">View on Google Maps</a>
+                <img src={whatever.locationImg} alt={whatever.locationAlt} />
+                <span className="country">{whatever.country}</span>
+                <a href={whatever.googleMapsLink} target="_blank" rel="noopener noreferrer">
+                  View on Google Maps
+                </a>
               </div>
 
-                <h2>FUJI MOTO</h2>
-                <p>20 jan - 30 jan 2026</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat tempora illo eos ducimus voluptate dolore suscipit porro, tempore optio dolor ipsa nulla
-                     voluptatibus odit voluptatum ratione repellendus corporis aliquam beatae!</p>
+                <h2>{whatever.title}</h2>
+                <p>{whatever.dates}</p>
+                <p>{whatever.text}</p>
             </div>
             
           </article>

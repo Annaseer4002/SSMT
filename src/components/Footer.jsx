@@ -8,3 +8,16 @@ export default function Footer () {
   )
 }
 
+
+const names = ["alice", "bob", "charlie", "danielle"]
+
+const capitalizedNames = names.map((name)=> {
+  return name[0].toUpperCase() + name.slice(1)
+})
+console.log(capitalizedNames);
+
+const paragraph = names.map(name => {
+  return `<p>${name}</p>`
+})
+console.log(paragraph);
+
